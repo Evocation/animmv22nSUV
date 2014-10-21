@@ -1,0 +1,11 @@
+private ["_targetveh"];
+_targetveh = (_this select 3);
+(vehicle player) removeAction suv_open;
+suv_open = 0;
+player action ["lightOn",_targetveh];
+sleep 1;
+_targetveh animate ["CloseCover1",0];
+_targetveh animate ["CloseCover2",0];
+sleep 1;
+_targetveh animate ["HideGun_01",0];
+suv_open = -1;
