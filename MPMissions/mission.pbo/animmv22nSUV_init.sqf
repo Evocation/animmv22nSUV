@@ -4,7 +4,7 @@ while {sleep 1;true} do {
 	_inVehicle = _curveh != player;
 	{
 		//diag_log("[CURSORTARGET] ENTINIES SHIT " + str(count((getPos vehicle _x) nearEntities ["CAManBase",15])));
-		if (((_x animationPhase "turn_wing") == 0) && ((count((getPos vehicle _x) nearEntities ["CAManBase",15])) == 0) && ((count (crew _x)) == 0) && (!isEngineOn _x) && (_x != _curveh)) then {
+		if (((_x animationPhase "turn_wing") == 0) && (({isPlayer _x} count ((getPos vehicle _x) nearEntities ["CAManBase",15])) == 0) && ((count (crew _x)) == 0) && (!isEngineOn _x) && (_x != _curveh)) then {
 			_x animate ["ramp_top",0];
 			_x animate ["ramp_bottom",0];
 			[_x,1] execVM "\ca\air2\mv22\scripts\pack.sqf";
