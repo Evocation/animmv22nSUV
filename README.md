@@ -13,4 +13,5 @@ just add to be boddom of your init.sqf this:
 ~~~~
 
 enjoy and report all bugs u find :)
+
 credits to ebay from opendayz.net!
